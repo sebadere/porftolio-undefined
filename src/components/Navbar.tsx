@@ -65,7 +65,7 @@ export const Navbar = () => {
       <nav>
         <NavList>
           <NavListItem>
-            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/">Projects</StyledLink>
           </NavListItem>
           <NavListItem>
             <StyledLink to="/about">About</StyledLink>

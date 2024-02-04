@@ -1,7 +1,9 @@
-import React from 'react'
+import { HomeHeaderComponent } from '../components/HomeHeaderComponent'
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <HomeHeaderComponent />
+    </div>
   )
 }
