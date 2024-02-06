@@ -7,20 +7,38 @@ const AboutUsContainer = styled.div`
     align-items: center;
     margin-top: 100px;
     margin-bottom: 100px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 40px;
+    }
 `;
 
 const InformationContainer = styled.div`
     margin-left: 50px;
+
+    @media (max-width: 768px) {
+        margin-left: unset;
+    }
 `;
 
 const Image = styled.img`
     width: 100%;
     height: 430px;
+
+    @media (max-width: 768px) {
+        height: 260px;
+        object-fit: contain;
+    }
 `;
 
 const Title = styled.h2`
     color: #333333;
     font-size: 50px;
+
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
 `;
 
 const TextContent = styled.p`

@@ -5,6 +5,10 @@ import { standoutTechnologiesData } from '../static/data/projectData';
 const TitleContainer = styled.h2`
     color: #333333;
     font-size: 50px;
+
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
 `;
 
 const ProjectContainer = styled.div`
@@ -15,11 +19,23 @@ const ProjectContainer = styled.div`
     border-top: 1px solid #CCCCCC;
     padding-top: 50px;
     padding-bottom: 50px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: unset;
+    }
 `;
 
 const ProjectImage = styled.img`
     width: 640px;
     height: 530px;
+    border-radius: 16px;
+
+    @media (max-width: 768px) {
+        height: 300px;
+        width: 90vw;
+        margin-top: 30px;
+    }
 `;
 
 const ProjectPrincipalInformationContainer = styled.div`
@@ -31,11 +47,19 @@ const ProjectTitle = styled.span`
     color: #808080;
     font-size: 45px;
     font-weight: 600;
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
 `;
 
 const ProjectSubTitle = styled.span`
     font-size: 45px;
     font-weight: 500;
+
+    @media (max-width: 768px) {
+       font-size: 30px;
+    }
 `;
 
 const ProjectTecList = styled.ul`
