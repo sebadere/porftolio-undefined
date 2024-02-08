@@ -36,7 +36,7 @@ const SpecialText = styled.span`
 
 export const HomeHeaderComponent = () => {
   return (
-    <Container>
+    <Container id='home'>
         <TitleContainer>
             <Text>Elevating Ideas</Text>
             <Text>through</Text>

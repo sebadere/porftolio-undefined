@@ -49,7 +49,7 @@ const TextContent = styled.p`
 
 export const About = () => {
   return (
-    <AboutUsContainer>
+    <AboutUsContainer id="about">
         <Image src={aboutUsImage} alt="about us image" />
         <InformationContainer>
             <Title>About us.</Title>

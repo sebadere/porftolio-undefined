@@ -9,7 +9,9 @@ const NavbarContainer = styled.div`
   margin-top: 12px;
 `;
 
-const LeftText = styled.div`
+const LeftText = styled.a`
+  text-decoration: none;
+  color: inherit;
   margin-right: auto;
   font-weight: Bold;
   font-size: 26px;
@@ -18,6 +20,11 @@ const LeftText = styled.div`
   &:hover {
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-right: 26px;
+}
 `;
 
 const NavList = styled.ul`
@@ -29,9 +36,14 @@ const NavList = styled.ul`
 
 const NavListItem = styled.li`
   margin-right: 30px;
+
+  @media (max-width: 768px) {
+    margin-right: 20px;
+    text-align: center;
+  }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   text-decoration: none;
   color: #333333;
   font-size: 17px;
@@ -61,14 +73,17 @@ const StyledLink = styled(Link)`
 export const Navbar = () => {
   return (
     <NavbarContainer>
-      <LeftText>Undefined</LeftText>
+      <LeftText href='#home'>Undefined</LeftText>
       <nav>
         <NavList>
           <NavListItem>
-            <StyledLink to="/">Projects</StyledLink>
+            <StyledLink href="#about">About</StyledLink>
           </NavListItem>
           <NavListItem>
-            <StyledLink to="/about">About</StyledLink>
+            <StyledLink href="#projects">Projects</StyledLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledLink href="#contact">Contact us</StyledLink>
           </NavListItem>
         </NavList>
       </nav>

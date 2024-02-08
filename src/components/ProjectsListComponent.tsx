@@ -146,7 +146,7 @@ const SeeMoreButton = styled.button`
 
 export const ProjectsListComponent = () => {
   return (
-    <div>
+    <div id='projects'>
         <TitleContainer>Some of our work.</TitleContainer>
         <ProjectContainer>
             <div>
