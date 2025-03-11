@@ -20,6 +20,13 @@ const HeaderContainer = styled.div`
     align-items: center;
 `;
 
+const MailContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
 const Title = styled.span`
     color: #333333;
     font-size: 50px;
@@ -40,7 +47,7 @@ const Subtitle = styled.span`
 `;
 
 const Email = styled.span`
-    font-size: 30px;
+    font-size: 24px;
     letter-spacing: .5px;
     color: #333333;
     width: 50%;
@@ -54,13 +61,17 @@ const Email = styled.span`
 `;
 
 export const Contact = () => {
-  return (
-    <Container id="contact">
-        <HeaderContainer>
-            <Title>Contact us.</Title>
-            <Subtitle>We keep it simple.</Subtitle>
-        </HeaderContainer>
-        <Email>invented_email@gmail.com</Email>
-    </Container>
-  )
+    return (
+        <Container id="contact">
+            <HeaderContainer>
+                <Title>Contact us.</Title>
+                <Subtitle>We keep it simple.</Subtitle>
+            </HeaderContainer>
+            <MailContainer>
+                <Email>derewicki.sebastian@gmail.com</Email>
+                <Email>ariel18vola@gmail.com</Email>
+            </MailContainer>
+
+        </Container>
+    )
 }
