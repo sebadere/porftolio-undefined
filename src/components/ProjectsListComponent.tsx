@@ -32,9 +32,9 @@ const ProjectContainer = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: center;     /* Center everything */
-    justify-content: center; /* Just in case you need horizontal centering */
-    padding: 0 16px;         /* Add horizontal padding so nothing touches screen edges */
+    /* Center horizontally in mobile */
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -45,6 +45,7 @@ const CarouselContainer = styled.div`
   gap: 12px;/* Spacing between arrows and image */
   @media (max-width: 900px) {  
     gap: 6px;
+    border: 1px solid red;
   }
 `;
 
