@@ -12,7 +12,7 @@ const PageContainer = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  width: 100vw;
+  width: 75vw;
 `;
 
 function App() {
