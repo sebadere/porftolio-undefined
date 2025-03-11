@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const NavbarContainer = styled.div`
@@ -7,13 +7,14 @@ const NavbarContainer = styled.div`
   align-items: center;
   padding: 10px;
   margin-top: 12px;
+  position: relative; /* So the mobile menu can be absolutely positioned if needed */
 `;
 
 const LeftText = styled.a`
   text-decoration: none;
   color: inherit;
   margin-right: auto;
-  font-weight: Bold;
+  font-weight: bold;
   font-size: 26px;
   font-family: 'Roboto', sans-serif;
 
@@ -24,21 +25,64 @@ const LeftText = styled.a`
   @media (max-width: 768px) {
     font-size: 20px;
     margin-right: 26px;
-}
+  }
 `;
 
-const NavList = styled.ul`
+/* Hamburger Icon */
+const HamburgerIcon = styled.div`
+  width: 25px;
+  height: 18px;
+  position: relative;
+  display: none;       /* Hidden by default (desktop) */
+  cursor: pointer;
+
+  /* Each bar in the hamburger */
+  span {
+    background: #333;
+    border-radius: 2px;
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    transition: 0.4s;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    display: block;   /* Show on mobile */
+  }
+`;
+
+const NavList = styled.ul<{ open: boolean }>`
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
+
+  /* Desktop styles */
+  @media (min-width: 769px) {
+    /* Keep as-is for desktop */
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 60px; 
+    right: 10px;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    display: ${({ open }) => (open ? 'flex' : 'none')};
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
 `;
 
 const NavListItem = styled.li`
   margin-right: 30px;
 
   @media (max-width: 768px) {
-    margin-right: 20px;
+    margin: 10px 0;  /* Spacing in the mobile menu */
     text-align: center;
   }
 `;
@@ -71,22 +115,38 @@ const StyledLink = styled.a`
 `;
 
 export const Navbar = () => {
+  // State to handle whether the mobile menu is open
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <NavbarContainer>
-      <LeftText href='#home'>Undefined</LeftText>
+      <LeftText href="#home">Undefined</LeftText>
+
+      {/* Hamburger icon - only visible on mobile */}
+      <HamburgerIcon onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </HamburgerIcon>
+
+      {/* Navigation Links */}
       <nav>
-        <NavList>
+        <NavList open={menuOpen}>
           <NavListItem>
-            <StyledLink href="#about">About</StyledLink>
+            <StyledLink href="#about" onClick={() => setMenuOpen(false)}>About</StyledLink>
           </NavListItem>
           <NavListItem>
-            <StyledLink href="#projects">Projects</StyledLink>
+            <StyledLink href="#projects" onClick={() => setMenuOpen(false)}>Projects</StyledLink>
           </NavListItem>
           <NavListItem>
-            <StyledLink href="#contact">Contact us</StyledLink>
+            <StyledLink href="#contact" onClick={() => setMenuOpen(false)}>Contact us</StyledLink>
           </NavListItem>
         </NavList>
       </nav>
     </NavbarContainer>
-  )
-}
+  );
+};
