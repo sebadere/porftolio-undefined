@@ -68,6 +68,10 @@ const StyledLink = styled.a`
     transform-origin: bottom left;
     transform: scaleX(1);
   }
+
+  @media (max-width: 768px) {
+        font-size: 10px;
+    }
 `;
 
 export const Navbar = () => {
@@ -81,9 +85,6 @@ export const Navbar = () => {
           </NavListItem>
           <NavListItem>
             <StyledLink href="#projects">Projects</StyledLink>
-          </NavListItem>
-          <NavListItem>
-            <StyledLink href="#contact">Contact us</StyledLink>
           </NavListItem>
         </NavList>
       </nav>
