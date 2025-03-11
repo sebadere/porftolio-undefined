@@ -64,7 +64,7 @@ const Email = styled.span`
     text-align: center;
 
     @media (max-width: 768px) {
-        font-size: 25px;
+        font-size: 17px;
         width: 100%;
         margin-top: 40px;
     }

@@ -70,7 +70,7 @@ const StyledLink = styled.a`
   }
 
   @media (max-width: 768px) {
-        font-size: 10px;
+        font-size: 12px;
     }
 `;
 
@@ -85,6 +85,9 @@ export const Navbar = () => {
           </NavListItem>
           <NavListItem>
             <StyledLink href="#projects">Projects</StyledLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledLink href="#contact">Contact us</StyledLink>
           </NavListItem>
         </NavList>
       </nav>
