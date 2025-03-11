@@ -32,19 +32,17 @@ const ProjectContainer = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    /* Center horizontally in mobile */
-    align-items: center;
-    justify-content: center;
+    align-items: center;     /* Center everything */
+    justify-content: center; /* Just in case you need horizontal centering */
+    padding: 0 16px;         /* Add horizontal padding so nothing touches screen edges */
   }
 `;
 
 const CarouselContainer = styled.div`
   display: flex;
   align-items: center;
-  /* Center the image and arrows horizontally */
-  justify-content: center;
-  /* Optional: Add some gap between the arrows and the image */
-  gap: 16px;
+  justify-content: center; /* Center horizontally */
+  gap: 12px;              /* Spacing between arrows and image */
 `;
 
 const CarouselButton = styled.button`
@@ -53,6 +51,8 @@ const CarouselButton = styled.button`
   cursor: pointer;
   font-size: 30px;
   color: #333;
+  margin: 0 8px;          /* Add horizontal margin so arrows don’t hug the edges */
+
   &:hover {
     color: #B09AC2;
   }
