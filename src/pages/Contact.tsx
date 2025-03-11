@@ -42,7 +42,7 @@ const Title = styled.span`
     font-size: 50px;
 
     @media (max-width: 768px) {
-        font-size: 32px;
+        gap: 
     }
 `;
 
@@ -66,7 +66,7 @@ const Email = styled.span`
     @media (max-width: 768px) {
         font-size: 17px;
         width: 100%;
-        margin-top: 40px;
+        margin-top: 20px;
     }
 `;
 
