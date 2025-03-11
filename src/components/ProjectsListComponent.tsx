@@ -59,6 +59,8 @@ const CarouselButton = styled.button`
 
   &:hover {
     color: #B09AC2;
+    margin: 0 6px;  
+    font-size: 20px;
   }
 `;
 
