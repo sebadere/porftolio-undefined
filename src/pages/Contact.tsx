@@ -1,17 +1,22 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    border-top: 1px solid #CCCCCC;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 100px;
-    padding-top: 50px;
+  border-top: 1px solid #CCCCCC;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  padding-top: 50px;
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    /* Center vertically in mobile */
+    justify-content: center;
+    align-items: center;
+    /* Optional: Add a gap for spacing between the header and mail container */
+    gap: 24px;
+  }
 `;
 
 const HeaderContainer = styled.div`
