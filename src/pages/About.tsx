@@ -11,6 +11,8 @@ const AboutUsContainer = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
         margin-top: 40px;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
@@ -19,6 +21,8 @@ const InformationContainer = styled.div`
 
     @media (max-width: 768px) {
         margin-left: unset;
+        align-items: center;
+        justify-content: center;
     }
 `;
 

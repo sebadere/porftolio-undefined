@@ -45,7 +45,6 @@ const CarouselContainer = styled.div`
   gap: 12px;/* Spacing between arrows and image */
   @media (max-width: 900px) {  
     gap: 6px;
-    border: 1px solid red;
   }
 `;
 
