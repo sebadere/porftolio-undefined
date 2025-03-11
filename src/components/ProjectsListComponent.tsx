@@ -44,6 +44,7 @@ const CarouselContainer = styled.div`
   justify-content: center; /* Center horizontally */
   gap: 12px;/* Spacing between arrows and image */
   @media (max-width: 900px) {  
+    padding-left: 5px;
     gap: 0px;
   }
 `;
