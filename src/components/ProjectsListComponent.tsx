@@ -42,7 +42,10 @@ const CarouselContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center; /* Center horizontally */
-  gap: 12px;              /* Spacing between arrows and image */
+  gap: 12px;/* Spacing between arrows and image */
+  @media (max-width: 900px) {  
+    gap: 6px;
+  }
 `;
 
 const CarouselButton = styled.button`
